@@ -18,9 +18,10 @@
             <div class="container">
                 <img src="~/Student_Query_Image.jpg" alt="Student_Query_Image"
                      width="75" height="75" class="d-inline-block align-top" />
+                
                 <a href="#" class="navbar-brand">
 
-                      Student ChatBot Portal
+                    Student ChatBot Portal
                 </a>
 
 
@@ -32,20 +33,15 @@
                 </div>
 
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item">
-                        <a href="Login" class="nav-link">Login</a>
+                        <a href="@Url.Action("Index","Queries")" class="btn btn-outline-primary">StudentQueries</a>
+                        @*<a href="Query" class="nav-link">Query</a>*@
                     </li>
                     <li class="nav-item">
-                        <a href="About" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="ContactUs" class="nav-link">ContactUs</a>
+                        <a href="@Url.Action("Logout","Home")" class="btn btn-outline-primary">Logout</a>
                     </li>
 
-                    @*<li class="nav-item">
-            <a href="Register" class="nav-link">New User</a>
-        </li>*@
+                 
                 </ul>
             </div>
         </nav>
@@ -53,11 +49,14 @@
     <section class=" bg-gradient text-light p-5 text-center"></section>
     <div class="container-body-content">
         <div class="d-sm-flex">
-            @*<p>&copy; @DateTime.Now.Year - This is Asp.Net MVC Application</p>*@
+
         </div>
 
-       
+
         @RenderBody()
+        @*<footer>
+            @DateTime.Now.Year - This is Asp.Net MVC Application
+        </footer>*@
 
         <hr />
 

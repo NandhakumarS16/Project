@@ -7,11 +7,15 @@ using Project.Models;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace Project.Controllers
 {
     public class HomeController : Controller
     {
         private DB_Entities _db = new DB_Entities();
+
+        // private Query_Entities _qb = new Query_Entities();
+
         // GET: Home
         public ActionResult Index()
         {
@@ -26,7 +30,10 @@ namespace Project.Controllers
         }
 
         //GET: Register
-
+        public ActionResult Welcome()
+        {
+            return View();
+        }
         public ActionResult Register()
         {
             return View();
@@ -44,6 +51,7 @@ namespace Project.Controllers
                 {
                     _user.Password = GetMD5(_user.Password);
                     _db.Configuration.ValidateOnSaveEnabled = false;
+                    _user.Role = "user";
                     _db.Users.Add(_user);
                     _db.SaveChanges();
                     return RedirectToAction("Index");
@@ -80,11 +88,20 @@ namespace Project.Controllers
                 var data = _db.Users.Where(s => s.Email.Equals(_userLogin.Email) && s.Password.Equals(f_password)).ToList();
                 if (data.Count() > 0)
                 {
-                    //add session
-                    Session["FullName"] = data.FirstOrDefault().FirstName + " " + data.FirstOrDefault().LastName;
-                    Session["Email"] = data.FirstOrDefault().Email;
-                    Session["UserId"] = data.FirstOrDefault().UserId;
-                    return RedirectToAction("Index");
+                    if (data.FirstOrDefault().Role == "Admin")
+
+                    {
+                        return RedirectToAction("AdminPanel");
+                    }
+
+                    else
+                    {
+                        //add session
+                        Session["FullName"] = data.FirstOrDefault().FirstName + " " + data.FirstOrDefault().LastName;
+                        Session["Email"] = data.FirstOrDefault().Email;
+                        Session["UserId"] = data.FirstOrDefault().UserId;
+                        return RedirectToAction("Index");
+                    }
                 }
                 else
                 {
@@ -105,6 +122,31 @@ namespace Project.Controllers
 
 
 
+        public ActionResult AdminPanel()
+        {
+
+            return View();
+        }
+
+        public ActionResult Queries(User _user)
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult ContactUs()
+        {
+            ViewBag.Message = "Your contact page.";
+            return View();
+        }
+
+
+
+
         //create a string MD5
         public static string GetMD5(string str)
         {
@@ -120,5 +162,8 @@ namespace Project.Controllers
             }
             return byte2String;
         }
+
+
     }
+
 }

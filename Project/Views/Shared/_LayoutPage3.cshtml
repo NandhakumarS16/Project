@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+        <li class="nav-item">
+            <a href="@Url.Action("studentEnquiry","Bot")" class="btn btn-outline-primary">StudentQueries</a>
+            @*<a href="Query" class="nav-link">Query</a>*@
+        </li>
+    </div>
+</body>
+</html>

@@ -27,10 +27,14 @@ namespace Project.Models
 
         public string Password { get; set; }
 
+        public string Role { get; set; }
+
         [NotMapped]
         [Required]
         [System.ComponentModel.DataAnnotations.Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+        
         public string FullName()
         {
             return this.FirstName + " " + this.LastName;
