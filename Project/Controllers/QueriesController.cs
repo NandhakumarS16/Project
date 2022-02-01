@@ -58,17 +58,6 @@ namespace Project.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult ContactUs()
-        {
-            ViewBag.Message = "Your contact page.";
-            return View();
-        }
-
 
         // POST: Queries/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
