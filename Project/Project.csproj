@@ -230,6 +230,16 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Models\Userquery.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Userquery.edmx</DependentUpon>
+      <LastGenOutput>Userquery.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Userquery.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Userquery.edmx</DependentUpon>
+      <LastGenOutput>Userquery1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -267,6 +277,18 @@
     <Content Include="Scripts\bootstrap.esm.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.min.js.map" />
+    <EntityDeploy Include="Models\Userquery.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Userquery.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Userquery.edmx.diagram">
+      <DependentUpon>Userquery.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Userqueries\Create.cshtml" />
+    <Content Include="Views\Userqueries\Delete.cshtml" />
+    <Content Include="Views\Userqueries\Details.cshtml" />
+    <Content Include="Views\Userqueries\Edit.cshtml" />
+    <Content Include="Views\Userqueries\Index.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -274,6 +296,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QueriesController.cs" />
+    <Compile Include="Controllers\UserqueriesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,6 +319,24 @@
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\Userquery.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Userquery.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Userquery.cs">
+      <DependentUpon>Userquery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Userquery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Userquery.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Userquery1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Userquery.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

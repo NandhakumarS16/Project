@@ -8,13 +8,13 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-header">
-                Welcome Student
+                Welcome @Session["FullName"].ToString()
             </div>
             <div class="card-body">
                 @if (Session["FullName"] != null)
                 {
-                    <p>Name: @Session["FullName"].ToString()</p>
-                    <p>Email: @Session["Email"].ToString()</p>
+                    @*<p>Name: @Session["FullName"].ToString()</p>*@
+                    <p>Your Email ID : @Session["Email"].ToString()</p>
                    
                 }
             </div>
