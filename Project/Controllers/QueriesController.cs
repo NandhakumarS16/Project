@@ -58,6 +58,18 @@ namespace Project.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult ContactUs()
+        {
+            ViewBag.Message = "Your contact page.";
+            return View();
+        }
+
+
         // POST: Queries/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -132,12 +144,6 @@ namespace Project.Controllers
             return RedirectToAction("Index");
         }
 
-        
-        public ActionResult BotInfo()
-        {
-            return View();
-
-        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

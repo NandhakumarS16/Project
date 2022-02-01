@@ -11,6 +11,7 @@ namespace Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Query
     {
@@ -19,6 +20,8 @@ namespace Project.Models
         public string Keyword1 { get; set; }
         public string Keyword2 { get; set; }
         public string Keyword3 { get; set; }
+
+      
         public string Response { get; set; }
     }
 }

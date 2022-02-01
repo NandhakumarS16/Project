@@ -180,10 +180,6 @@
       <DependentUpon>RegisterUser.mdf</DependentUpon>
     </Content>
     <Content Include="background.jpg" />
-    <Content Include="BotResources\bot-avatar.png" />
-    <Content Include="BotResources\close-button.png" />
-    <Content Include="BotResources\send-button.png" />
-    <Content Include="BotResources\user-avatar.png" />
     <Content Include="chatbot2.png" />
     <Content Include="chatbot3.png" />
     <Content Include="chatbot4.jpg" />
@@ -289,6 +285,7 @@
     <Content Include="Views\Userqueries\Details.cshtml" />
     <Content Include="Views\Userqueries\Edit.cshtml" />
     <Content Include="Views\Userqueries\Index.cshtml" />
+    <Content Include="Views\Queries\About.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
