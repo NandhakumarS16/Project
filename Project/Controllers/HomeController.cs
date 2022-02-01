@@ -14,8 +14,6 @@ namespace Project.Controllers
     {
         private DB_Entities _db = new DB_Entities();
 
-        // private Query_Entities _qb = new Query_Entities();
-
         // GET: Home
         public ActionResult Index()
         {
@@ -25,8 +23,13 @@ namespace Project.Controllers
             }
             else
             {
-                return RedirectToAction("Login");
+
+
+                ViewBag.error = "Login failed";
+             
             }
+
+            return RedirectToAction("Login");
         }
 
         //GET: Register
@@ -66,14 +69,12 @@ namespace Project.Controllers
             }
             return View();
 
-
         }
-
+        
         public ActionResult Login()
         {
             return View();
         }
-
 
 
         [HttpPost]
@@ -105,11 +106,13 @@ namespace Project.Controllers
                 }
                 else
                 {
-                    ViewBag.error = "Login failed";
-                    return RedirectToAction("Login");
+                    
+                   // return RedirectToAction("Login");
+                    ViewBag.error = "Email or Password does not match.";
+                    return View();
                 }
             }
-            return View();
+          return View();
         }
 
 

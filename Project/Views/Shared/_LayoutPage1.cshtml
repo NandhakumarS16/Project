@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -10,59 +11,85 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700448595.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%,90%;
+            background-attachment: fixed;
+        }
+        </style>
+
 </head>
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-black navbar-dark navbar-fixed-top">
             <div class="container">
-                <img src="~/Student_Query_Image.jpg" alt="Student_Query_Image"
-                     width="75" height="75" class="d-inline-block align-top" />
-                <a href="#" class="navbar-brand">
 
-                      Student ChatBot Portal
+
+                <img src="~/chatbot4.jpg" alt="chatbot4"
+                 width="75" height="75" class="d-inline-block align-top" />
+
+                <a href="#" class="navbar-brand active">
+
+                    Student ChatBot Portal
                 </a>
+                <div>
 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        @*<span class="navbar-toggler-icon"></span>*@
+                    </button>
+                    <div class="collapse navbar-collapse" id="navmenu">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    @*<span class="navbar-toggler-icon"></span>*@
-                </button>
-                <div class="collapse navbar-collapse" id="navmenu">
+                    </div>
 
                 </div>
 
                 <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a href="Login" class="nav-link">Login</a>
+                    <li class="nav-item active">
+                        <a href="@Url.Action("Login", "Home")" class="nav-link">Login </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="About" class="nav-link">About</a>
+                    @*<li> @Html.ActionLink("Register", "Register", "Home")</li>*@
+                    <li class="nav-item active">
+                        <a href="@Url.Action("About", "Home")" class="nav-link">
+                            About Us
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="ContactUs" class="nav-link">ContactUs</a>
+                    <li class="nav-item active">
+                        <a href="@Url.Action( "ContactUs", "Home")" class="nav-link">
+                            Contact Us
+                        </a>
                     </li>
 
-                    @*<li class="nav-item">
-            <a href="Register" class="nav-link">New User</a>
-        </li>*@
+
+
+
                 </ul>
             </div>
-        </nav>
-    </div>
-    <section class=" bg-gradient text-light p-5 text-center"></section>
-    <div class="container-body-content">
-        <div class="d-sm-flex">
-            @*<p>&copy; @DateTime.Now.Year - This is Asp.Net MVC Application</p>*@
-        </div>
+                               </nav>
+                            </div>
+                        
 
-       
-        @RenderBody()
 
-        <hr />
 
-    </div>
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+                    
+               
+                <section class=" bg-gradient text-light p-5 text-center"></section>
+                <div class="container-body-content">
+                    <div class="d-sm-flex">
+                        <h1></h1>
+                    </div>
+
+
+                    @RenderBody()
+
+
+
+                </div>
+                <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+                <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+
