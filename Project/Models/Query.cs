@@ -16,12 +16,14 @@ namespace Project.Models
     public partial class Query
     {
         public int SNo { get; set; }
+
+        [Required]
         public string Request { get; set; }
         public string Keyword1 { get; set; }
         public string Keyword2 { get; set; }
         public string Keyword3 { get; set; }
 
-      
+        [Required]
         public string Response { get; set; }
     }
 }

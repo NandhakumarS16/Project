@@ -285,7 +285,6 @@
     <Content Include="Views\Userqueries\Details.cshtml" />
     <Content Include="Views\Userqueries\Edit.cshtml" />
     <Content Include="Views\Userqueries\Index.cshtml" />
-    <Content Include="Views\Queries\About.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
