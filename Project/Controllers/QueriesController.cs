@@ -27,9 +27,9 @@ namespace Project.Controllers
     {
         private RegisterUserEntities db = new RegisterUserEntities();
 
-        private static WidgetChannel WidgetChannel { get; }
+       // private static WidgetChannel WidgetChannel { get; }
 
-        private static OscovaBot Bot { get; }
+      //  private static OscovaBot Bot { get; }
 
         // GET: Queries
         public ActionResult Index()
