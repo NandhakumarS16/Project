@@ -12,29 +12,43 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <style>
-        body {
-            background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700448595.jpg);
-            background-repeat: no-repeat;
-            background-size: 100%,90%;
-            background-attachment: fixed;
+        .navbar-brand {
+            font-size: 30px;
         }
-        </style>
+
+        .nav-link {
+            font-size: 20px;
+            color: whitesmoke;
+        }
+           
+        body {
+            background-image: url('../../chatbot5.png');
+            background-repeat:no-repeat;
+            background-size:100%,100%;
+            background-attachment:fixed;
+        }
+       
+    </style>
 
 </head>
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg bg-black navbar-dark navbar-fixed-top">
+        
+        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
             <div class="container">
 
 
-                <img src="~/chatbot4.jpg" alt="chatbot4"
-                 width="75" height="75" class="d-inline-block align-top" />
 
-                <a href="#" class="navbar-brand active">
-
+                <img src="~/chatbot7.jpg" alt="chatbot7"
+                width="75" height="75" class="img-circle" />
+                
+                <a href="#" class="navbar-brand alert-heading nav navbar-nav navbar-right">
+                    
+                    
                     Student ChatBot Portal
                 </a>
+                
                 <div>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -46,26 +60,27 @@
 
                 </div>
 
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto justify-content-md-end">
+                    @*<ul class="nav navbar-nav navbar-right">*@
 
-                    <li class="nav-item active">
-                        <a href="@Url.Action("Login", "Home")" class="nav-link  ">Login </a>
-                    </li>
-                    @*<li> @Html.ActionLink("Register", "Register", "Home")</li>*@
-                    <li class="nav-item active">
-                        <a href="@Url.Action("About", "Home")" class="nav-link">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="@Url.Action( "ContactUs", "Home")" class="nav-link">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            </nav>
-         </div>
+                        <li class="nav-item active">
+                            <a href="@Url.Action("Login", "Home")" class="nav-link justify-content-md-end">Login </a>
+                        </li>
+                        @*<li> @Html.ActionLink("Register", "Register", "Home")</li>*@
+                        <li class="nav-item active">
+                            <a href="@Url.Action("About", "Home")" class="nav-link justify-content-md-end">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="@Url.Action( "ContactUs", "Home")" class="nav-link content-md-end">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+</div>
+        </nav>
+    </div>
                 <section class=" bg-gradient text-light p-5 text-center"></section>
                 <div class="container-body-content">
                     <div class="d-sm-flex">

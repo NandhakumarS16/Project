@@ -183,6 +183,9 @@
     <Content Include="chatbot2.png" />
     <Content Include="chatbot3.png" />
     <Content Include="chatbot4.jpg" />
+    <Content Include="chatbot5.png" />
+    <Content Include="chatbot6.png" />
+    <Content Include="chatbot7.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -199,6 +202,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\Query.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -245,6 +249,7 @@
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Student_Query_Image.jpg" />
     <Content Include="Student_Query_Image1.jpg" />
+    <Content Include="style.css\StyleSheet1.css" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
@@ -285,6 +290,7 @@
     <Content Include="Views\Userqueries\Details.cshtml" />
     <Content Include="Views\Userqueries\Edit.cshtml" />
     <Content Include="Views\Userqueries\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage5.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
