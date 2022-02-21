@@ -1,8 +1,8 @@
 ﻿@model Project.Models.Userquery
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+    //ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
             @Html.AntiForgeryToken()
     
             <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
+                <input type="submit" value="Delete" class="btn btn-primary" /> |
                 @Html.ActionLink("Back to List", "Index")
             </div>
         }

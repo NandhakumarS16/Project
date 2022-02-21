@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<Project.Models.Query>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+    //ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
 <h2>Index</h2>
@@ -49,7 +50,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.SNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SNo }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.SNo }) |*@
             @Html.ActionLink("Delete", "Delete", new { id=item.SNo })
         </td>
     </tr>

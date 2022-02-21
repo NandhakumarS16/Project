@@ -92,6 +92,7 @@ namespace Project.Controllers
                     if (data.FirstOrDefault().Role == "Admin")
 
                     {
+                       
                         return RedirectToAction("AdminPanel");
                     }
 
@@ -127,14 +128,11 @@ namespace Project.Controllers
 
         public ActionResult AdminPanel()
         {
-
+          
             return View();
         }
 
-        public ActionResult Queries(User _user)
-        {
-            return View();
-        }
+      
 
         public ActionResult About()
         {

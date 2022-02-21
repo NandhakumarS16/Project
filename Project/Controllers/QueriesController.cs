@@ -27,9 +27,6 @@ namespace Project.Controllers
     {
         private RegisterUserEntities db = new RegisterUserEntities();
 
-       // private static WidgetChannel WidgetChannel { get; }
-
-      //  private static OscovaBot Bot { get; }
 
         // GET: Queries
         public ActionResult Index()
@@ -134,38 +131,7 @@ namespace Project.Controllers
         }
 
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult BotInfo([Bind(Include = "SNo,Request,Keyword1,Keyword2,Keyword3,Response")] Query query)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var check = db.Queries.FirstOrDefault(s => s.Request == query.Request);
-        //        if (check == null)
-        //        {
-        //            ViewBag.error = "Incorrect Query";
-        //        }
-        //        else
-        //        {
-        //            var bot = new OscovaBot();
-        //            bot.Dialogs.Add(new ChannelTestDialog(bot));
-        //            bot.Trainer.StartTraining();
-        //            bot.MainUser.ResponseReceived += (sender, resArg) =>
-        //            {
-        //                _=resArg.Response.Text;
-
-        //            };
-
-        //        }
-
-
-        //    }
-
-        //    return RedirectToAction("Index");
-        //   // return View();
-
-        //}
-
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing)
